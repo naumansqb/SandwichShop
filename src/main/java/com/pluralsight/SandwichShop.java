@@ -15,8 +15,16 @@ public class SandwichShop {
 
         System.out.println("Please chose which sandwich you'd like from above: ");
         userChoice=scan.nextInt();
-
-
+        scan.nextLine();
+        System.out.println("Would you like the sandwich loaded? \n Yes or No");
+        String isLoaded=scan.nextLine();
+        if(isLoaded.equalsIgnoreCase("Yes")){
+            if(userChoice==1){
+                regularCost+=1;
+            }else{
+                largeCost+=1.75;
+            }
+        }
         System.out.println("\n Please enter your age below: ");
         int userAge=scan.nextInt();
 
